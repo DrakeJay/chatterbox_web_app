@@ -25,7 +25,11 @@ SECRET_KEY = 'django-insecure-@y+2=dwd_%kih$l3$n(ptaudh8vbzaqy@)3%5c(0fh0iqcw^d4
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = [
+    '127.0.0.1',
+    'localhost',
+    'chatterboxwebapp-production.up.railway.app', #had to add the garbage to allow 3rd party applications to host
+]
 
 
 # Application definition
