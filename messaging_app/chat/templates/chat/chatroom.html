@@ -21,7 +21,7 @@
 
 
         const chatSocket = new WebSocket(
-            'ws://' + window.location.host + '/chatroom/'
+            (window.location.protocol === 'https:' ? 'wss://' : 'ws://') + window.location.host + '/chatroom/'  // Added this so it can do both https as well as htpp
         );
 
         chatSocket.onmessage = function(e) {
