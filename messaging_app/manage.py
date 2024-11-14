@@ -20,3 +20,7 @@ def main():
 
 if __name__ == '__main__':
     main()
+
+
+
+##### use this to run the dang thang -----      daphne -p 8000 messaging_app.asgi:application
