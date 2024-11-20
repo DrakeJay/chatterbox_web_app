@@ -12,7 +12,7 @@ os.environ.setdefault('DJANGO_SETTINGS_MODULE', 'messaging_app.settings')
 
 print("ASGI application loaded successfully")
 
-application = ASGIStaticFilesHandler(get_asgi_application())({
+application =get_asgi_application({
     "http": get_asgi_application(),
     "websocket": AuthMiddlewareStack(
         URLRouter(
